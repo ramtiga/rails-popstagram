@@ -1,3 +1,4 @@
+require "open-uri"
 class PhotoController < ApplicationController
   def index
     uri = "https://api.instagram.com/v1/media/popular?client_id=" + Settings.instagram.client_id
