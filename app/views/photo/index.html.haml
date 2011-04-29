@@ -1,0 +1,10 @@
+%div#main
+  %h3 Popstagram - Instagram popular photos -
+
+  %ul.images
+    - @h.data.each_with_index do |d, cnt|
+      %li
+        = link_to(image_tag(d.images.thumbnail.url), d.link, :target => "_blank")
+      - if cnt % 5 == 4 
+        %br
+

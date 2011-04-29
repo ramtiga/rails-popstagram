@@ -1,4 +1,8 @@
 Popstagram::Application.routes.draw do
+  get "photo/index"
+  root :to  => "photo#index"
+
+  match '*path', :controller => 'application', :action => 'error_404'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
